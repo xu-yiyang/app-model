@@ -1,0 +1,87 @@
+.imgItem {
+  height: 124px;
+  cursor: move;
+  position: relative;
+
+  .item {
+    height: 100%;
+    border: 1px solid #49494f !important;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      z-index: 1;
+      width: calc(100% - 16px);
+      height: calc(100% - 16px);
+      background-color: rgba(0, 0, 0, 0.45);
+      opacity: 0;
+      transition: all 0.3s;
+      content: " ";
+    }
+  }
+
+  .upload-imgs-main-img {
+    position: absolute;
+    top: -17px;
+    left: -17px;
+    z-index: 10;
+  }
+
+  :global {
+    .ant-upload-list-item {
+      border: 1px solid #49494f !important;
+      padding: 0 !important;
+
+      &::before {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+
+    .ant-upload-list-item-name {
+      width: 100% !important;
+    }
+  }
+}
+
+.upload-box {
+  height: 124px;
+  overflow: hidden;
+  .addIcon {
+    font-size: 30px;
+    color: #4A494E;
+  }
+  
+  .is-dragging a {
+    pointer-events: none;
+  }
+  
+  .viewImgModel {
+    :global {
+      .ant-modal-content {
+        background-color: #202024;
+      }
+  
+      .ant-modal-close-icon {
+        color: rgba(255, 255, 255, 0.45);
+      }
+    }
+  }
+  
+  :global {
+    .ant-upload-list-item-container {
+      width: 124px !important;
+      height: 124px !important;
+      margin: 0 2px !important;
+    }
+  
+    .ant-upload.ant-upload-select {
+      width: 124px !important;
+      height: 124px !important;
+      margin: 0 2px !important;
+    }
+    .ant-spin-text {
+      text-shadow: none !important;
+    }
+  }
+}

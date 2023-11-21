@@ -1,0 +1,135 @@
+@pd16: 16px;
+
+.container {
+  .wrap {
+    display: flex;
+    height: 100vh;
+    color: #fff;
+  
+    .left {
+      width: 200px;
+      flex: none;
+      background-color: #26272b;
+      height: 100%;
+    }
+  
+    .right {
+      flex: 1;
+      background: #202024;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .topBox {
+        border-bottom: 1px solid #282a2c;
+        // height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 14px 100px 14px 14px;
+        width: 100%;
+
+        -webkit-app-region: drag;
+      }
+
+      .centerBox {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        position: relative;
+
+        .load {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          z-index: 11111;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.6);
+        }
+      }
+      
+      .footerBox {
+        background-color: #242529;
+        padding: 14px;
+      }
+    }
+  }
+}
+
+:global {
+  #dropzone.activity {
+    position: relative;
+    &::after {
+      content: '鼠标松开图片后搜索';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 11111111;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  #dropzone.activity * {
+    pointer-events: none;
+  }
+
+  .ant-btn-disabled, .ant-btn-primary:disabled {
+    border: 1px solid #D9D9D9 !important;
+    background: #F5F5F5 !important;
+  }
+
+  .ant-select-dropdown {
+    background-color: #313234;
+    color: #fff;
+
+    .ant-cascader-menu-item-expand-icon {
+      color: #fff !important;
+    }
+
+    .ant-select-item {
+      color: #fff !important;
+    }
+
+    // .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    //   color: #fff;
+    //   font-weight: 600;
+    //   background-color: #1890FF;
+    // }
+
+    // .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled) {
+    //   color: #fff;
+    //   font-weight: 600;
+    //   background-color: #1890FF;
+    // }
+  }
+
+  .ant-select-selection-item-remove {
+    color: #fff !important;
+  }
+
+  .ant-select-clear {
+    background-color: #000 !important;
+    border-radius: 50%;
+
+    .anticon-close-circle {
+      color: #fff;
+    }
+  }
+
+  .ant-image-preview-mask {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}

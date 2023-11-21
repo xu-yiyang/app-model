@@ -1,0 +1,73 @@
+.renderItem {
+  display: flex;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 4px;
+  align-items: center;
+  line-height: 1;
+
+  .title {
+    font-size: 16px;
+    color: #fff;
+    margin: 0 8px;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  em {
+    width: 18px;
+    height: 18px;
+    border-radius: 1px;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+  }
+
+  .right {
+    margin-left: 0.2vw;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+    overflow: hidden;
+
+    .tag {
+      margin: 0 0 0 6px;
+    }
+
+    .icon {
+      font-size: 18px;
+      line-height: 1;
+      height: 18px;
+      width: 18px;
+      margin-left: 6px;
+      color: #fff;
+
+      .close {
+        display: none;
+      }
+
+      &:hover {
+        .close {
+          display: block;
+        }
+        .success {
+          display: none;
+        }
+      }
+    }
+
+    & > i {
+      font-size: 14px;
+      color: #949494;
+    }
+  }
+}

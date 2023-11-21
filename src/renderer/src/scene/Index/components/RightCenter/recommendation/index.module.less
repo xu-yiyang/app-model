@@ -1,0 +1,28 @@
+.centerR {
+  background-color: #26272B;
+
+  .title {
+    overflow: hidden;
+    padding: 0 20px;
+
+    :global {
+      .ant-divider-inner-text {
+        padding: 0 7px;
+      }
+    }
+  }
+
+  .imgList {
+    padding: 5px 20px 0;
+    height: calc(100% - 54px);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    :global {
+      .imgItem {
+        margin: 0 0 10px;
+        width: 100%;
+      }
+    }
+  }
+}

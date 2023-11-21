@@ -1,0 +1,4 @@
+provider: generic
+channel: latest
+url: https://s.1haomoxing.cn/updater/new_admin_client/
+updaterCacheDirName: app-first-model-updater

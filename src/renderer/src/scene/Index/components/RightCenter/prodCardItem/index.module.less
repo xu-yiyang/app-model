@@ -1,0 +1,137 @@
+@number: 1px;
+
+.imgItem, .i {
+  flex-grow: 1;
+  max-width: 200px;
+  min-width: 100px;
+  transition: all 0.2s;
+  margin: @number;
+}
+
+.i {
+  height: 0;
+}
+
+.imgItem {
+  position: relative;
+  cursor: pointer;
+  background-color: #fff;
+  // background-color: #2A292E;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover,
+  &.cur {
+    box-shadow: 0 0 0 2px #4a9cee;
+    z-index: 1;
+    // background-color: #343436;
+
+    .proTitle {
+      display: block;
+    }
+
+    .icons > span {
+      display: flex;
+
+      &.blocks {
+        .hover {
+          display: flex;
+        }
+  
+        .noHover {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  .check {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    line-height: 1;
+  }
+
+  .icons > span {
+    position: absolute;
+    top: 6px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    font-size: 14px;
+
+    & > * {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      line-height: 1;
+    }
+
+    &.noDown {
+      display: flex !important;
+      border-color: rgba(0, 0, 0, 0.5) !important;
+      background: rgba(0, 0, 0, 0.5) !important;
+      cursor: not-allowed !important;
+      opacity: 0.75;
+    }
+
+    &:hover, &.cur {
+      border: 1px solid #D8D8D8;
+      background: rgba(128, 128, 128, 0.75);
+    }
+
+    &.left {
+      left: 8px;
+    }
+
+    &.right {
+      right: 8px;
+    }
+
+    &.blocks {
+      display: flex;
+
+      .hover {
+        display: none;
+      }
+
+      &:hover {
+        .hover {
+          display: flex;
+        }
+
+        .noHover {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .proTitle {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(180deg, #00000000 0%, #0000001a 28.000000000000004%, #00000073 66%, #00000080 100%);
+    width: 100%;
+    font-size: 12px;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: none;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 40px;
+  }
+}

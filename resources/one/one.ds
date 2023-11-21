@@ -1,0 +1,24 @@
+macroScript OneDropMacroScript(  
+  local itemPath = @"E:\MyProject\maxscript\oneScript\one\Items\001\item.one"
+  local matrender = "Corona"
+  local isModels = false
+  
+  on droppable window node: return(
+    window == #viewport
+  ) 
+
+	on drop window node:do(
+    local path = getFilenamePath(getSourceFileName())
+    local scriptPath = path + "Script\OneScript.ms"
+
+    global OneScript
+
+    if doesFileExist scriptPath then(
+      filein scriptPath
+      OneScript.Main dsFile:itemPath target:node matType:matrender isModels:isModels
+    )else(
+      messageBox "Error 脚本文件丢失，请联系客服！" title:"1号模型网"
+    )
+  )
+  
+)

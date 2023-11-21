@@ -1,0 +1,27 @@
+.titlebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  height: 30px;
+  user-select: none;
+  -webkit-app-region: no-drag;
+}
+
+.titlebar-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.titlebar-button:not(#titlebar-close):hover {
+  background: #29292b;
+}
+#titlebar-close:hover {
+  background: #E22222;
+}

@@ -1,0 +1,152 @@
+
+.topupModal {
+  :global {
+    .ant-modal-content, .ant-modal-header {
+      background-color: #202024;
+    }
+    .ant-modal-content {
+      padding: 0;
+    }
+    .ant-modal-header {
+      padding: 13px 23px;
+      border-bottom: 1px solid #49494f;
+
+      .ant-modal-title {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: normal;
+      }
+    }
+
+    .ant-modal-close {
+      color: #8d8d8d;
+      top: 12px;
+
+      .ant-modal-close-x {
+        font-size: 13px;
+      }
+
+      &:hover {
+        color: #4a9cee;
+      }
+    }
+
+    .ant-modal-body {
+      padding: 16px 32px 24px;
+    }
+  }
+
+  em, i {
+    font-style: normal;
+  }
+
+  .table {
+    width: 100%;
+    border: 1px solid #49494f;
+
+    .item {
+      display: flex;
+      color: #ffffff;
+      font-size: 14px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #49494f;
+      }
+
+      & > * {
+        padding: 14px;
+      }
+
+      .amount {
+        em {
+          color: #4a9cee;
+        }
+      }
+
+      & > span {
+        background: #313234;
+        width: 96px;
+        flex: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      & > div {
+        flex: 1;
+
+        ul {
+          display: flex;
+
+          li {
+            width: 92px;
+            height: 48px;
+            border: 1px solid #49494F;
+            margin-right: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4a9cee; 
+            font-size: 12px;
+            cursor: pointer;
+            padding: 6px 0;
+
+            .box {
+              display: flex;
+              height: 100%;
+              width: 100%;
+
+              i {
+                width: 27px;
+                flex: none;
+                text-align: center;
+                padding: 0 6px;
+                border-right: 1px solid #4a9cee;
+                line-height: 1;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+
+              span {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+
+            &.cur {
+              border-color: rgb(74, 156, 238);
+            }
+          }
+        }
+
+        .qrcode-box, p {
+          margin-top: 12px;
+        }
+
+        p {
+          color: #8D8D8D;
+          font-size: 14px;
+
+          i {
+            color: #4a9cee;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .text {
+    color: #fff;
+    font-size: 14px;
+    margin: 14px 0;
+
+    em {
+      font-weight: bold;
+    }
+  }
+}

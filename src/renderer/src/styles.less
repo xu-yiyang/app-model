@@ -1,0 +1,96 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #0f0f0f;
+  background-color: #f6f6f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+em, i {
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+/* WebKit 浏览器（Chrome、Safari）样式调整 */
+/* 水平滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4e4e4e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 垂直滚动条 */
+::-webkit-scrollbar.vertical {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track.vertical {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb.vertical {
+  background: #4e4e4e;
+}
+
+::-webkit-scrollbar-thumb.vertical:hover {
+  background: #555;
+}
+
+/* 非 WebKit 浏览器（Firefox）样式调整 */
+/* 滚动条宽度和颜色 */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #4e4e4e none;
+}
+
+/* 滚动条轨道颜色 */
+body::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* 滚动条滑块颜色 */
+body::-webkit-scrollbar-thumb {
+  background-color: #4e4e4e;
+}
+
+/* 滚动条滑块悬停颜色 */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #2f2f2f;
+  }
+}

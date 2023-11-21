@@ -1,0 +1,108 @@
+@borderColor: #49494f;
+.audItem {
+  margin-top: -1px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid @borderColor;
+  border-top: 1px solid @borderColor;
+
+  .head {
+    padding: 6px 4px;
+    border-bottom: 1px solid @borderColor;
+  }
+
+  .context {
+    .contextLeft {
+      width: 100%;
+      display: flex;
+
+      em {
+        display: flex;
+        height: 38px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        margin: -1px;
+        cursor: pointer;
+
+        &:not(.cur) {
+          border: 1px solid @borderColor;
+          background-color: #202020;
+        }
+      }
+    }
+
+    .contextRight {
+      padding: 12px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .checkbox {
+        margin-top: 6px;
+      }
+
+      .textArea {
+        width: 156px;
+      }
+
+      .uplodaBox {
+        width: 150px;
+        :global {
+          .ant-upload-list {
+            * {
+              color: #fff;
+            }
+
+            .ant-upload-list-item {
+              margin-top: 2px;
+            }
+          }
+
+          .ant-upload-select {
+            border: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.lock {
+  &:hover {
+    color: #1890FF;
+  }
+}
+
+:global {
+  .ant-dropdown-menu-submenu, .ant-dropdown {
+    .ant-dropdown-menu {
+      background: #2C2C2C !important;
+      border: 1px solid #000 !important;
+    }
+
+    .ant-dropdown-arrow:before {
+      background: #2C2C2C !important;
+    }
+
+    .ant-dropdown-menu-submenu-title {
+      display: flex;
+      align-items: center;
+      color: #fff !important;
+    }
+  
+    .ant-dropdown-menu-title-content {
+      margin-left: 8px;
+      color: #fff !important;
+    }
+  
+    .ant-dropdown-menu-submenu-arrow-icon {
+      color: #fff !important;
+    }
+
+    .ant-dropdown-menu-item:hover, .ant-dropdown-menu-submenu-title:hover {
+      background: #202024 !important;
+    }
+
+  }
+}

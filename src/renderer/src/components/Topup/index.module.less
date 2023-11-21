@@ -1,0 +1,116 @@
+.topupModal {
+    :global {
+        .ant-modal-content, .ant-modal-header {
+            background-color: #202024;
+        }
+        .ant-modal-content {
+            padding: 0;
+        }
+        .ant-modal-header {
+            padding: 13px 23px;
+            border-bottom: 1px solid #49494f;
+
+            .ant-modal-title {
+                color: #ffffff;
+                font-size: 14px;
+                font-weight: normal;
+            }
+        }
+
+        .ant-modal-close {
+            color: #8d8d8d;
+            top: 12px;
+
+            .ant-modal-close-x {
+                font-size: 13px;
+            }
+
+            &:hover {
+                color: #4A9CEE;
+            }
+        }
+
+        .ant-modal-body {
+            padding: 16px 32px 24px;
+        }
+    }
+
+    
+    .radio {
+        display: flex;
+        border-bottom: 1px solid #49494f;
+        padding-bottom: 14px;
+        margin-bottom: 14px;
+
+        & > div {
+            margin-right: 10px;
+            border: 1px solid #49494f;
+            padding: 0;
+            width: 80px;
+            height: 40px;
+            display: flex;
+            flex: none;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: #898989;
+            font-size: 14px;
+
+            &.cur {
+                border-color: #4A9CEE;
+                color: #4A9CEE;
+            }
+        }
+        .input {
+            width: 100%;
+            height: 100%;
+            background: none;
+            border: none;
+
+            input {
+                color: #898989;
+                height: 38px;
+                padding: 0 8px;
+
+                &::placeholder {
+                  color: #898989;
+                  font-size: 12px;
+                }
+            }
+        }
+    }
+
+    
+    .qrcode {
+        display: flex;
+        align-items: center;
+    
+        .text {
+          margin-left: 16px;
+          color: #fff;
+          font-size: 14px;
+        }
+    
+        .qrcodeBox {
+          position: relative;
+          cursor: pointer;
+          font-size: 0;
+    
+          .generate {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,0.8);
+            color: #4a9cee;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+          }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+@pd16: 16px;
+
+.leftBox {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .avatar {
+    padding: 15px @pd16;
+    display: flex;
+    align-items: center;
+
+    .name {
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+      color: #fff;
+      margin-left: 10px;
+    }
+
+    .dropdown {
+      margin-left: auto;
+    }
+  }
+
+  .portCut {
+    padding: 10px @pd16 15px;
+    cursor: pointer;
+
+    .portCutBox {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    :global {
+      .anticon {
+        font-size: 16px;
+        vertical-align: -3px;
+      }
+    }
+  }
+
+  .tabs {
+    flex: 1;
+    overflow: hidden;
+
+    .tabsMain {
+      color: #fff;
+      text-align: center;
+      font-size: 12px;
+
+      :global {
+        .anticon {
+          margin-right: 0;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .tabsContainer {
+      padding: 0 @pd16;
+      overflow: auto;
+      height: calc(100% - 76px);
+
+    }
+
+    :global {
+      .ant-tabs-nav {
+        padding: 0 @pd16;
+
+        &::before {
+          border-bottom-color: #49494F;
+        }
+      }
+    }
+  }
+
+  .model {
+    background: #313234;
+    margin: 14px;
+    padding: 2px 10px 10px;
+
+    .title {
+      font-weight: 400;
+      font-size: 12px;
+      text-align: left;
+      color: #c7c7cc;
+      margin-top: 8px;
+    }
+
+    .format {
+      border-radius: 2px;
+      background: #4f5053;
+      font-weight: 400;
+      font-size: 13px;
+      text-align: left;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 4px 6px;
+      cursor: pointer;
+
+      i {
+        margin-left: 10px;
+      }
+    }
+
+    .rendererList {
+      li {
+        padding: 6px;
+        border-radius: 2px;
+        float: left;
+        line-height: 1;
+        font-size: 0;
+        cursor: pointer;
+
+        .icon {
+          filter: grayscale(100%);
+        }
+        &:hover, &.cur {
+          background: #4f5053;
+          .icon {
+            filter:none;
+          }
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+    }
+  }
+}
+.dropdownOverlay {
+  :global {
+    .ant-dropdown-menu {
+      background-color: #2C2C2C;
+      width: 200px;
+      border: 1px solid #080808;
+      
+      li {
+        color: #fff !important;
+      }
+
+      .ant-dropdown-menu-item-divider {
+        background-color: #3C3C3F;
+      }
+
+      .ant-dropdown-menu-item:hover {
+        background-color: #515151;
+      }
+    }
+  }
+}
+
+.dropdownMenu{
+  display: block;
+}

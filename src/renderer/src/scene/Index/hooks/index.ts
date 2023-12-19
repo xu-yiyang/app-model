@@ -168,7 +168,9 @@ export const useIndex = () => {
               rendererIndex: 0
             }
           }
-          config[key].list = res.data[key]
+          if (config[key]) {
+            config[key].list = res.data[key]
+          }
         })
         setFilterConfig(config)
       }
